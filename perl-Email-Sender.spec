@@ -6,7 +6,7 @@
 %define		pnam	Sender
 %include	/usr/lib/rpm/macros.perl
 Summary:	Email::Sender - a library for sending email
-#Summary(pl.UTF-8):	
+#Summary(pl.UTF-8):
 Name:		perl-Email-Sender
 Version:	1.300020
 Release:	0.1
@@ -15,11 +15,11 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Email/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	9956cd26dba5a9f803b0d2817df4d873
-# generic URL, check or change before uncommenting
-#URL:		http://search.cpan.org/dist/Email-Sender/
+URL:		https://github.com/rjbs/Email-Sender
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
+BuildRequires:	perl(Capture::Tiny) >= 0.08
 BuildRequires:	perl(Email::Abstract) >= 3.006
 BuildRequires:	perl(Email::Address)
 BuildRequires:	perl(Email::Simple) >= 1.998
@@ -33,13 +33,18 @@ BuildRequires:	perl(Sub::Exporter)
 BuildRequires:	perl(Sub::Exporter::Util)
 BuildRequires:	perl(Throwable::Error) >= 0.200003
 BuildRequires:	perl(Try::Tiny)
-BuildRequires:	perl(Capture::Tiny) >= 0.08
 %endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Email::Sender replaces the old and sometimes problematic Email::Send
+library, which did a decent job at handling very simple email sending
+tasks, but was not suitable for serious use, for a variety of reasons.
 
+Most users will be able to use Email::Sender::Simple to send mail.
+Users with more specific needs should look at the available
+Email::Sender::Transport classes.
 
 # %description -l pl.UTF-8
 # TODO
