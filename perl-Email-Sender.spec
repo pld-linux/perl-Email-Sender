@@ -9,7 +9,7 @@ Summary:	Email::Sender - a library for sending email
 #Summary(pl.UTF-8):	
 Name:		perl-Email-Sender
 Version:	1.300020
-Release:	1
+Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
