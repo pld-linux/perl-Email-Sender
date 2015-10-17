@@ -3,12 +3,11 @@
 #
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
-#
+
 %define		pdir	Email
 %define		pnam	Sender
 %include	/usr/lib/rpm/macros.perl
 Summary:	Email::Sender - a library for sending email
-#Summary(pl.UTF-8):
 Name:		perl-Email-Sender
 Version:	1.300020
 Release:	0.3
@@ -23,18 +22,17 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl(Capture::Tiny) >= 0.08
 BuildRequires:	perl(Email::Abstract) >= 3.006
-BuildRequires:	perl(Email::Address)
 BuildRequires:	perl(Email::Simple) >= 1.998
-BuildRequires:	perl(List::MoreUtils)
-BuildRequires:	perl(Module::Runtime)
 BuildRequires:	perl(Moo) >= 1.000008
-BuildRequires:	perl(Moo::Role)
 BuildRequires:	perl(MooX::Types::MooseLike) >= 0.15
 BuildRequires:	perl(MooX::Types::MooseLike::Base)
-BuildRequires:	perl(Sub::Exporter)
-BuildRequires:	perl(Sub::Exporter::Util)
 BuildRequires:	perl(Throwable::Error) >= 0.200003
-BuildRequires:	perl(Try::Tiny)
+BuildRequires:	perl-Email-Address
+BuildRequires:	perl-List-MoreUtils
+BuildRequires:	perl-Module-Runtime
+BuildRequires:	perl-Moo
+BuildRequires:	perl-Sub-Exporter
+BuildRequires:	perl-Try-Tiny
 %endif
 Requires:	perl-Class-Methods-Modifiers
 Requires:	perl-Throwable
@@ -50,9 +48,6 @@ Most users will be able to use Email::Sender::Simple to send mail.
 Users with more specific needs should look at the available
 Email::Sender::Transport classes.
 
-# %description -l pl.UTF-8
-# TODO
-
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
@@ -65,7 +60,6 @@ Email::Sender::Transport classes.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
 
