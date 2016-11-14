@@ -9,13 +9,13 @@
 %include	/usr/lib/rpm/macros.perl
 Summary:	Email::Sender - a library for sending email
 Name:		perl-Email-Sender
-Version:	1.300020
-Release:	0.3
+Version:	1.300030
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Email/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	9956cd26dba5a9f803b0d2817df4d873
+# Source0-md5:	3a0c24feba2e8ba89c30f9d95beae74b
 URL:		https://github.com/rjbs/Email-Sender
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
