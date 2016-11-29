@@ -10,7 +10,7 @@
 Summary:	Email::Sender - a library for sending email
 Name:		perl-Email-Sender
 Version:	1.300030
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -34,7 +34,6 @@ BuildRequires:	perl-Moo
 BuildRequires:	perl-Sub-Exporter
 BuildRequires:	perl-Try-Tiny
 %endif
-Requires:	perl-Class-Methods-Modifiers
 Requires:	perl-Throwable
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
