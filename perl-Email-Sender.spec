@@ -6,7 +6,6 @@
 
 %define		pdir	Email
 %define		pnam	Sender
-%include	/usr/lib/rpm/macros.perl
 Summary:	Email::Sender - a library for sending email
 Name:		perl-Email-Sender
 Version:	1.300030
