@@ -8,13 +8,13 @@
 %define		pnam	Sender
 Summary:	Email::Sender - a library for sending email
 Name:		perl-Email-Sender
-Version:	1.300030
-Release:	2
+Version:	2.601
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Email/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	3a0c24feba2e8ba89c30f9d95beae74b
+# Source0-md5:	20aed58073155ac38530b3d64eb73379
 URL:		https://github.com/rjbs/Email-Sender
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -26,6 +26,7 @@ BuildRequires:	perl(Moo) >= 1.000008
 BuildRequires:	perl(MooX::Types::MooseLike) >= 0.15
 BuildRequires:	perl(MooX::Types::MooseLike::Base)
 BuildRequires:	perl(Throwable::Error) >= 0.200003
+BuildRequires:	perl-Class-Method-Modifiers
 BuildRequires:	perl-Email-Address
 BuildRequires:	perl-List-MoreUtils
 BuildRequires:	perl-Module-Runtime
